@@ -160,6 +160,9 @@
 .empty-display{
     display: none;
 }
+.cross-icon{
+    margin-right: 80px;
+}
 @media screen and (max-width: 991px) {
     .product-show-container{
         height: auto;
@@ -184,5 +187,11 @@
     .quantity-number{
         margin-top: 12px;
         font-size: 15px;
+    }
+    /* .cart-display{
+        transform: translateY(-1000px);
+    } */
+    .cross-icon{
+        margin-right: 10px;
     }
 }
