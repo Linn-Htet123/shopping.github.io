@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+  
+    <section class="container-fluid cart-whole-container position-fixed  cart-display pb-5" style="top:0; left:0;bottom: 0; right: 0; z-index: 3;">
+        <div class="cart-cross-icon-container d-flex justify-content-end py-4 "style="cursor: pointer;">
+            <i class="fa-solid fa-xmark text-white fs-3" style="margin-right: 80px;"></i>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="container bg-light rounded-3" style="height: 85vh;overflow-y: scroll;">
+                
+                <div class="row">
+                    <div class="col-12 mb-3  bg-white position-sticky rounded-3" style="top: 0px;">
+                        <div class="d-flex justify-content-between align-items-center  p-3 rounded-3">
+                            <div class="cart-total-btn-container">
+                                <div class="cart-total-buy d-flex">
+                                    <h4 class="p-0 mb-0 mx-2">Total :</h4>
+                                    <h4 class="p-0 m-0">$<span class="cart-total-amount">0</span></h4>
+                                </div>
+                            </div>
+                            <div class="cart-buy-btn-container">
+                                <div class="cart-buy">
+                                    Buy
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="all-cart-whole-container">
+                            
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid product-show-whole-container">
+            
+    </section>
+   
+    <!--nav bar-->
+    <section class="container-fluid nav-section">
+        <div class="container">
+            <nav class="row mt-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="logo-container  text-center">
+                            <h3 class=" m-0 p-0" style="color: var(--text-btn-color);">My shop</h3>
+                            <small class="text-black-50">feel free to buy</small>
+                        </div>
+                
+                        <div class="form-row d-flex form-whole-container">  
+                            <div class="cart-container position-relative " style="cursor: pointer;">
+                                
+                                    <i class="fa-solid fa-cart-shopping fs-4 mt-2 mx-3" style="color: var(--text-btn-color);"></i>
+                                    <div class="badges badge-display"></div>
+                               
+                            </div>
+                          
+                            <div class="position-relative d-none d-md-block">
+                                <input type="text" placeholder="search" id="search"class="form-control" style="padding-left: 30px; width: 150px;">
+                                <span class="search-icon"><i class="fa-solid fa-magnifying-glass text-black-50"></i></span>
+                            </div>
+                            <div class="mx-2 d-none d-md-block">
+                                <select name="" id="catogory" class="form-control">
+                                    <option value="All catogory">All catogory</option>
+                                    <option value="electronics">electronics</option>
+                                    <option value="jewelery">jewelery</option>
+                                    <option value="men's clothing">All men's clothing</option>
+                                    <option value="women's clothing">women's clothing</option>
+                                </select>
+                            </div>
+                        </div> 
+                    </div>
+                   
+                </div>
+            </nav>
+        </div>
+    </section>
+     <!--nav bar-->
+    <!--select search mobile-->
+    <section class="container-fluid d-block d-md-none search-select-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class=" d-flex align-items-center justify-content-center" style="height: 150px;">
+                        <div class="form-row d-flex form-whole-container">  
+                            
+                            <div class="position-relative">
+                                <input type="text" placeholder="search" id="search"class="form-control" style="padding-left: 30px; width: 200px;">
+                                <span class="search-icon"><i class="fa-solid fa-magnifying-glass text-black-50"></i></span>
+                            </div>
+                            <div class="mx-2">
+                                <select name="" id="catogory" class="form-control">
+                                    <option value="All catogory">All catogory</option>
+                                    <option value="electronics">electronics</option>
+                                    <option value="jewelery">jewelery</option>
+                                    <option value="men's clothing">men's clothing</option>
+                                    <option value="women's clothing">women's clothing</option>
+                                </select>
+                            </div>
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid mt-5">
+        <div class="container">
+            <div class="row all-card-container">
+               
+               
+            </div>
+        </div>
+    </section>
+    
+     <!--select search mobile-->
+     <script src="node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="btn_func.js"></script>
+    <script src="add_cart.js"></script>
+    <script src="cart_functions.js"></script>
+    <script>
+        // $("input").keyup(function(){
+        //     console.log($("#search").val())
+        // })
+           
+        //$("input[type='number']").inputSpinner();
+//            $(".show-product-cart-buy-container").delegate("cart", "click", function(){
+//     console.log("cart")
+// })
+    </script>
+</body>
+</html>
